@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.modal-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(220, 220, 220, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    cursor: zoom-out;
+}
+.modal {
+    width: 500px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #f0eeee;
+    background-color: aliceblue;
+    cursor: auto;
+}
+.modal-button i {
+    background-color: aqua;
+    padding: 10px;
+}
+.modal-content {
+    padding: 10px;
+}
+
+button {
+    margin: 15px auto;
+    background-color: aqua;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border: 0;
+    width: 150px;
+}
+.modal-container.close {
+    visibility: hidden;
+}

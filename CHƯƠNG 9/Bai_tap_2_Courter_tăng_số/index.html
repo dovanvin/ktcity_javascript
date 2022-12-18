@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+</body>
+<script>
+    let body = document.body ;
+    let div = document.createElement("div");
+    body.appendChild(div);
+    body.insertAdjacentElement("afterbegin", div) ;
+    div.setAttribute("class", "container");
+    let g = document.createElement("button");
+    div.appendChild(g);
+    g.className = "btn_g" ;
+    g.textContent = "-" ;
+
+    let number = document.createElement("button");
+    div.appendChild(number);
+    number.className = "number" ;
+    number.textContent = "0" ;
+
+
+    let t = document.createElement("button");
+    div.appendChild(t);
+    t.className = "btn_t" ;
+    t.textContent = "+" ;
+
+    //--------------- tạo tương tác --------------
+    let numberValue = parseInt(number.textContent) ;
+
+    g.addEventListener("click", buttonG);
+    function buttonG(event) {
+        if(numberValue <= 0 ) return 0 ;
+        numberValue-- ;
+        number.textContent = numberValue ;
+    }
+
+    t.addEventListener("click", buttonT);
+    function buttonT(event) {
+        if(numberValue >= 10 ) return  ;
+        numberValue++ ;
+        number.textContent = numberValue;
+    }
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0; padding: 0;
+        font-family: sans-serif;
+        border: 0; outline: none;
+        transition: all .2s linear;
+        text-decoration: none;
+        text-transform: capitalize;
+        box-sizing: border-box;
+    }
+    html{
+        font-size: 62.5%;
+    }
+    body{
+        margin: 100px 7%;
+    }
+    .joke {
+        text-align: center;
+    }
+    .joke-heading{
+        margin-bottom: 4rem;
+    }
+    .joke-button{
+        background-color: rgb(41, 150, 126);
+        color: #eee;
+        padding:1rem ;
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+    .loader {
+        display: none;
+        
+    }
+    
+    .joke.loading .loader{
+        display: block;
+    }
+    .joke.loading .joke-button span{
+        display: none;
+    }
+    .joke.loading .joke-button{
+        pointer-events: none;
+        opacity: .5;
+    }
+</style>
+<body>
+    <div class="joke ">
+        <h1 class="joke-heading">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, possimus tempore? Dolorum aliquam facilis vitae quam facere. Unde ipsum quidem consequuntur, suscipit quia reiciendis voluptatum, nesciunt recusandae architecto odit possimus.
+        </h1>
+        <button class="joke-button">
+            <div class="loader">loading...</div>
+            <span>Get random joke</span>
+        </button>
+    </div>
+</body>
+<script src="./joke.js"></script>
+</html>

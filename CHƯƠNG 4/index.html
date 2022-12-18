@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            width: 100%;
+            height: 60px;
+            background-color: burlywood;
+            display: flex; /*cha con*/
+        }
+        header > .logo{
+            flex-basis: 25%;
+        }
+        .logo > div {
+            color: peru;
+            font-size: 25px;
+            font-weight: 600;
+            text-transform: uppercase;
+            height: 60px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+        }
+        /* navigation */
+        nav {
+            flex-basis: 75%;
+        }
+        nav ul {
+            text-align: center;
+            list-style: none;
+        }
+        nav ul li {
+            display: inline-table;
+            width: 120px;
+            height: 60px;
+            line-height: 60px;
+            position: relative;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: peru;
+            font-size: 18px;
+        }
+        nav ul li:hover > a{
+            color: yellow;
+            border-bottom:3px solid red;
+            display: block;
+        }
+        .dropdown {
+            display: none;
+        }
+        nav ul li:hover > .dropdown{
+            display: block;
+            
+            position:absolute;
+            top: 63px;
+        }
+        .item {
+            margin-top:30px;
+            background-color: burlywood;
+            width: 200px;
+        }
+    </style>
+<body>
+    <!-- *********************HEADER******************** -->
+    <header>
+        <!-- logo -->
+        <div class="logo">
+            <div><span>logo</span></div>
+        </div>
+        <!-- navigation -->
+        <nav>
+            <ul>
+                <li><a href="#">trang chủ</a></li>
+                <li><a href="#">giới thiệu</a>
+                    <div class="dropdown">
+                        
+                        <div class="item">
+                            <ul>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                                <li><a href="#">item</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">blog</a></li>
+                <li><a href="#">tin tức</a></li>
+                <li><a href="#">liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+     
+</body>
+<script src="./arrow_bai_4_fn.js"></script>
+</html>

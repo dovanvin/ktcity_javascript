@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+</style>
+
+<body>
+    <form action="" class="form">
+        <input type="password" name="password" value="" placeholder="password" required>
+        <i class="fa fa-eye icon"></i>
+        <button type="submit">click</button>
+    </form>
+</body>
+
+<script>
+    window.addEventListener("load", function() {
+        let form = document.querySelector(".form");
+        form.addEventListener("submit", submit);
+        function submit(event) {
+            event.preventDefault() ;
+            let password = this.elements["password"].value ;
+            if (!password) {
+                alert("nhập lại password!");
+                return;
+            }
+            if ( password.length < 6) {
+                alert("nhập lại password!");
+                return;
+            }
+            console.log(password);
+        }
+        let icon = document.querySelector(".icon");
+        icon.addEventListener("click", iconClick);
+        function iconClick() {
+            let input = this.previousElementSibling ;
+            let inputType = input.getAttribute("type");
+            if ( inputType === "password") {
+                input.setAttribute("type", "text");
+            } else {
+                input.setAttribute("type", "password");
+            }
+        }
+    });
+    
+
+</script>
+</html>

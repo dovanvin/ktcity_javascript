@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.tab{
+    width: 400px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px gainsboro;
+    padding: 10px;
+}
+.tab-list {
+    width: 100%;
+    height: auto;
+    padding:10px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.tab-list .tab-item{
+    flex-basis:25%;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.tab-list .tab-item.active{
+    background: linear-gradient( rgb(150, 0, 142), #73b6d1);
+    pointer-events: none;
+    color: #fff;
+}
+.tab-content{
+    display: none;
+
+}
+.tab-content.active{
+    display: block;
+}
